@@ -34,7 +34,7 @@ export async function postBookInfo(name, description, price) {
   
   const result = await bookRentContract.addBook(name,description,price).send({
     feeLimit:100_000_000,
-    callValue:0,
+    callValue:500
     shouldPollResponse:true
   });
 
